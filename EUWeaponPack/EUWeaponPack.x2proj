@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Default" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Guid>fa9b04b1-c447-4ce3-b608-d6f7a7d0e648</Guid>
+    <Name>EUWeaponPack</Name>
+    <Description>This example mod demonstrates how to add a new weapon to XCom 2</Description>
+    <SteamPublishID>0</SteamPublishID>
+    <AssemblyName>ExampleWeapon</AssemblyName>
+    <RootNamespace>ExampleWeapon</RootNamespace>
+    <ProjectGuid>{3f350978-33e7-493a-993b-92c1b54bf591}</ProjectGuid>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="Config\XComEditor.ini" />
+    <Content Include="Config\XComEngine.ini" />
+    <Content Include="Config\XComEUWeapons.ini">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Config\XComGame.ini" />
+    <Content Include="Config\XComGameData.ini">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Config\XComOrderControl.ini">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\10_Sound.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\20_FX.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\30_Anim.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\40_Attachments.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\50_FX_Plasma_Sniper_Rifle.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\EU_AlloyCannon.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\EU_HeavyPlasma.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\EU_LightPlasma.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\EU_PlasmaPistol.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\EU_PlasmaRifle.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\EU_PlasmaSniper.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\EU_PlasmaWeapon_Archetypes.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\UILibrary_EUWeapon.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Localization\XComGame.int" />
+    <Content Include="ModPreview.jpg" />
+    <Content Include="ReadMe.txt" />
+    <Content Include="Src\EUWeaponPack\Classes\OrderControl.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\EUWeaponPack\Classes\X2Ability_EUWeaponPack.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\EUWeaponPack\Classes\X2DownloadableContentInfo_EUWeaponPack.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\EUWeaponPack\Classes\X2Item_EUWeaponPack.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\OrderControl_Common\Classes\OrderControl_Controller.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\OrderControl_Common\Classes\OrderControl_Interface.uc">
+      <SubType>Content</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Config\" />
+    <Folder Include="Content\" />
+    <Folder Include="Localization\" />
+    <Folder Include="Src\" />
+    <Folder Include="Src\EUWeaponPack" />
+    <Folder Include="Src\EUWeaponPack\Classes" />
+    <Folder Include="Src\OrderControl_Common" />
+    <Folder Include="Src\OrderControl_Common\Classes" />
+  </ItemGroup>
+  <Import Project="$(MSBuildLocalExtensionPath)\XCOM2.targets" />
+</Project>

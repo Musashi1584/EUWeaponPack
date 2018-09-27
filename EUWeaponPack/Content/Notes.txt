@@ -1,0 +1,64 @@
+AutoLoader	- MagC
+Core		- CoreB (repeater)
+Core_Teeth	- TeethA (hair trigger)
+FlashLight*	- FlashLight
+HeatSink	- HeatSinkB (stock)
+Mag		- MagB
+Optic		- OpticB, OpticC
+
+SkeletalMesh'EU_AlloyCannon.Meshes.SM_EU_AlloyCannon_CoreB'
+SkeletalMesh'EU_AlloyCannon.Meshes.SM_EU_AlloyCannon_FlashLight'
+SkeletalMesh'EU_AlloyCannon.Meshes.SM_EU_AlloyCannon_HeatSinkB'
+SkeletalMesh'EU_AlloyCannon.Meshes.SM_EU_AlloyCannon_MagB'
+SkeletalMesh'EU_AlloyCannon.Meshes.SM_EU_AlloyCannon_MagC'
+SkeletalMesh'EU_AlloyCannon.Meshes.SM_EU_AlloyCannon_OpticB'
+SkeletalMesh'EU_AlloyCannon.Meshes.SM_EU_AlloyCannon_OpticC'
+SkeletalMesh'EU_AlloyCannon.Meshes.SM_EU_AlloyCannon_TeethA'
+
+SkeletalMesh'EU_HeavyPlasma.Meshes.SM_EU_HeavyPlasma_CoreB'
+SkeletalMesh'EU_HeavyPlasma.Meshes.SM_EU_HeavyPlasma_FlashLight'
+SkeletalMesh'EU_HeavyPlasma.Meshes.SM_EU_HeavyPlasma_HeatSinkB'
+SkeletalMesh'EU_HeavyPlasma.Meshes.SM_EU_HeavyPlasma_MagB'
+SkeletalMesh'EU_HeavyPlasma.Meshes.SM_EU_HeavyPlasma_MagC'
+SkeletalMesh'EU_HeavyPlasma.Meshes.SM_EU_HeavyPlasma_OpticB'
+SkeletalMesh'EU_HeavyPlasma.Meshes.SM_EU_HeavyPlasma_OpticC'
+SkeletalMesh'EU_HeavyPlasma.Meshes.SM_EU_HeavyPlasma_TeethA'
+
+SkeletalMesh'EU_LightPlasma.Meshes.SM_EU_LightPlasma_CoreB'
+SkeletalMesh'EU_LightPlasma.Meshes.SM_EU_LightPlasma_FlashLight'
+SkeletalMesh'EU_LightPlasma.Meshes.SM_EU_LightPlasma_HeatSinkB'
+SkeletalMesh'EU_LightPlasma.Meshes.SM_EU_LightPlasma_MagB'
+SkeletalMesh'EU_LightPlasma.Meshes.SM_EU_LightPlasma_MagC'
+SkeletalMesh'EU_LightPlasma.Meshes.SM_EU_LightPlasma_OpticB'
+SkeletalMesh'EU_LightPlasma.Meshes.SM_EU_LightPlasma_OpticC'
+SkeletalMesh'EU_LightPlasma.Meshes.SM_EU_LightPlasma_TeethA'
+
+SkeletalMesh'EU_PlasmaPistol.Meshes.SM_EU_PlasmaPistol_CoreB'
+SkeletalMesh'EU_PlasmaPistol.Meshes.SM_EU_PlasmaPistol_HeatSinkB'
+SkeletalMesh'EU_PlasmaPistol.Meshes.SM_EU_PlasmaPistol_MagB'
+SkeletalMesh'EU_PlasmaPistol.Meshes.SM_EU_PlasmaPistol_MagC'
+SkeletalMesh'EU_PlasmaPistol.Meshes.SM_EU_PlasmaPistol_OpticB'
+SkeletalMesh'EU_PlasmaPistol.Meshes.SM_EU_PlasmaPistol_OpticC'
+SkeletalMesh'EU_PlasmaPistol.Meshes.SM_EU_PlasmaPistol_TeethA'
+
+SkeletalMesh'EU_PlasmaRifle.Meshes.SM_EU_PlasmaRifle_CoreB'
+SkeletalMesh'EU_PlasmaRifle.Meshes.SM_EU_PlasmaRifle_FlashLight'
+SkeletalMesh'EU_PlasmaRifle.Meshes.SM_EU_PlasmaRifle_HeatSinkB'
+SkeletalMesh'EU_PlasmaRifle.Meshes.SM_EU_PlasmaRifle_MagB'
+SkeletalMesh'EU_PlasmaRifle.Meshes.SM_EU_PlasmaRifle_MagC'
+SkeletalMesh'EU_PlasmaRifle.Meshes.SM_EU_PlasmaRifle_OpticB'
+SkeletalMesh'EU_PlasmaRifle.Meshes.SM_EU_PlasmaRifle_OpticC'
+SkeletalMesh'EU_PlasmaRifle.Meshes.SM_EU_PlasmaRifle_TeethA'
+
+SkeletalMesh'EU_PlasmaSniper.Meshes.SM_EU_PlasmaSniper_CoreB'
+SkeletalMesh'EU_PlasmaSniper.Meshes.SM_EU_PlasmaSniper_FlashLight'
+SkeletalMesh'EU_PlasmaSniper.Meshes.SM_EU_PlasmaSniper_HeatSinkB'
+SkeletalMesh'EU_PlasmaSniper.Meshes.SM_EU_PlasmaSniper_MagB'
+SkeletalMesh'EU_PlasmaSniper.Meshes.SM_EU_PlasmaSniper_MagC'
+SkeletalMesh'EU_PlasmaSniper.Meshes.SM_EU_PlasmaSniper_OpticB'
+SkeletalMesh'EU_PlasmaSniper.Meshes.SM_EU_PlasmaSniper_OpticC'
+SkeletalMesh'EU_PlasmaSniper.Meshes.SM_EU_PlasmaSniper_TeethA'
+
+*Not present on pistol
+**Plasma Sniper model was edited with another bone being added for anchoring barrel attachments, allowing them to move with the barrel during its firing animtion, and also to make easier setting up the sockets in the SDK
+***40_Attachments contains the edited beam materials used by attachments with emissive components
