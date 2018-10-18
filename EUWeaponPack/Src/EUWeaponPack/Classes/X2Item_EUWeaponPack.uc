@@ -2,6 +2,7 @@ class X2Item_EUWeaponPack extends X2Item config(EUWeapons);
 
 var config bool UseFlashLights;
 var config bool LightPlasmaSMG;
+var config bool LightPlasmaBullpup;
 var config bool RemoveBeamTierWeapons;
 
 var config WeaponDamageValue LightPlasmaRifle_BaseDamage;
@@ -41,7 +42,8 @@ static function X2DataTemplate CreateTemplate_AssaultRifle(optional name NewTemp
 
 	Template.strImage = "img:///UILibrary_EUWeapon.PlasmaRifle";
 	Template.GameArchetype = "EU_PlasmaWeapon_Archetypes.WP_PlasmaRifle";
-	
+	Template.BaseItem = '';
+
 	return Template;
 }
 
@@ -63,7 +65,8 @@ static function X2DataTemplate CreateTemplate_Shotgun(optional name NewTemplateN
 
 	Template.strImage = "img:///UILibrary_EUWeapon.AlloyCannon";
 	Template.GameArchetype = "EU_PlasmaWeapon_Archetypes.WP_AlloyCannon";
-	
+	Template.BaseItem = '';
+
 	return Template;
 }
 
@@ -85,7 +88,8 @@ static function X2DataTemplate CreateTemplate_Cannon(optional name NewTemplateNa
 
 	Template.strImage = "img:///UILibrary_EUWeapon.HeavyPlasma";
 	Template.GameArchetype = "EU_PlasmaWeapon_Archetypes.WP_HeavyPlasma";
-	
+	Template.BaseItem = '';
+
 	return Template;
 }
 
@@ -107,7 +111,8 @@ static function X2DataTemplate CreateTemplate_SniperRifle(optional name NewTempl
 
 	Template.strImage = "img:///UILibrary_EUWeapon.PlasmaSniper";
 	Template.GameArchetype = "EU_PlasmaWeapon_Archetypes.WP_PlasmaSniper";
-	
+	Template.BaseItem = '';
+
 	return Template;
 }
 
@@ -127,6 +132,7 @@ static function X2DataTemplate CreateTemplate_Pistol(optional name NewTemplateNa
 
 	Template.strImage = "img:///UILibrary_EUWeapon.PlasmaPistol";
 	Template.GameArchetype = "EU_PlasmaWeapon_Archetypes.WP_PlasmaPistol";
+	Template.BaseItem = '';
 
 	return Template;
 }
@@ -149,6 +155,8 @@ static function X2DataTemplate CreateTemplate_LightPlasmaRifle(optional name New
 		Template.BaseItem = '';
 	} else if (default.LightPlasmaSMG == true) {
 		Template.BaseItem = 'SMG_MG';
+	} else if (default.LightPlasmaBullpup == true) {
+		Template.BaseItem = 'Bullpup_MG';
 	}
 
 	if (default.UseFlashLights)
@@ -156,11 +164,12 @@ static function X2DataTemplate CreateTemplate_LightPlasmaRifle(optional name New
 
 	Template.strImage = "img:///UILibrary_EUWeapon.LightPlasma";
 	Template.GameArchetype = "EU_PlasmaWeapon_Archetypes.WP_LightPlasma";
+	Template.BaseItem = '';
 
 	return Template;
 }
 
-static function MakeLightPlasmaSMG(optional name SMGTemplateName = 'SMG_BM', optional name LightPlasmaTemplateName = 'LightPlasmaRifle_PL')
+static function MakeLightPlasmaSomethingElse(optional bool SMGBonuses = true, optional name SMGTemplateName = 'SMG_BM', optional name LightPlasmaTemplateName = 'LightPlasmaRifle_PL')
 {
 	local X2ItemTemplateManager	ItemTemplateManager;
 	local X2WeaponTemplate SMGTemplate;
@@ -172,8 +181,10 @@ static function MakeLightPlasmaSMG(optional name SMGTemplateName = 'SMG_BM', opt
 	if (SMGTemplate != none) {
 		Template = X2WeaponTemplate(ItemTemplateManager.FindItemTemplate(LightPlasmaTemplateName));
 
-		Template.Abilities.AddItem('SMG_PL_StatBonus');
-		Template.SetUIStatMarkup(class'XLocalizedData'.default.MobilityLabel, eStat_Mobility, class'X2Ability_EUWeaponPack'.default.SMG_Plasma_MOBILITY_BONUS);
+		if (SMGBonuses == true) {
+			Template.Abilities.AddItem('SMG_PL_StatBonus');
+			Template.SetUIStatMarkup(class'XLocalizedData'.default.MobilityLabel, eStat_Mobility, class'X2Ability_EUWeaponPack'.default.SMG_Plasma_MOBILITY_BONUS);
+		}
 
 		Template.RangeAccuracy = SMGTemplate.RangeAccuracy;
 		Template.BaseDamage = SMGTemplate.BaseDamage;

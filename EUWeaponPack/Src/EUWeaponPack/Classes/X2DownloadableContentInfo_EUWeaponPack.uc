@@ -51,7 +51,9 @@ function OrderControl_Controller GetController() {
 static event OC_OnPostTemplatesCreated()
 {
 	if (class'X2Item_EUWeaponPack'.default.LightPlasmaSMG) {
-		class'X2Item_EUWeaponPack'.static.MakeLightPlasmaSMG();
+		class'X2Item_EUWeaponPack'.static.MakeLightPlasmaSomethingElse();
+	} else if (class'X2Item_EUWeaponPack'.default.LightPlasmaBullpup) {
+		class'X2Item_EUWeaponPack'.static.MakeLightPlasmaSomethingElse(false, 'Bullpup_BM');
 	}
 
 	AddAttachments();
@@ -155,6 +157,7 @@ static function AddWeaponsToHQ()
     local XComGameStateContext context;
 	local XComGameState_HeadquartersXCom XComHQ;
 	local bool SMG_Installed;
+	local bool UsingBullpup;
     
     History = `XCOMHISTORY;
 
@@ -177,6 +180,8 @@ static function AddWeaponsToHQ()
 		if (class'OrderControl'.static.GetMyInstance("LW_SMGPack_WotC") != none) {
 			SMG_Installed = true;
 		}
+	} else if (class'X2Item_EUWeaponPack'.default.LightPlasmaBullpup) {
+		UsingBullpup = true;
 	}
 
 	SearchAddItem(XComHQ, NewGameState, 'AssaultRifle_BM', 'AssaultRifle_PL');
@@ -187,6 +192,8 @@ static function AddWeaponsToHQ()
 
 	if (SMG_Installed) {
 		SearchAddItem(XComHQ, NewGameState, 'SMG_BM', 'LightPlasmaRifle_PL');
+	} else if (UsingBullpup) {
+		SearchAddItem(XComHQ, NewGameState, 'Bullpup_BM', 'LightPlasmaRifle_PL');
 	} else {
 		SearchAddItem(XComHQ, NewGameState, 'AssaultRifle_BM', 'LightPlasmaRifle_PL');
 	}
